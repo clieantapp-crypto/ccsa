@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>روابطي | صفحة تعريف احترافية</title>
+    <meta
+      name="description"
+      content="صفحة روابط تعريفية احترافية باللغة العربية مع صورة شخصية وأزرار أنيقة لأربع روابط."
+    />
+    <meta name="theme-color" content="#0ea5e9" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="روابطي | صفحة تعريف" />
+    <meta
+      property="og:description"
+      content="صفحة روابط تعريفية احترافية باللغة العربية."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://picsum.photos/800/420" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%230ea5e9'/><text x='50' y='60' text-anchor='middle' font-size='52' fill='white' font-family='Arial'>ر</text></svg>"
+    />
+
+    <!-- Webfont (Cairo) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #0b1220; /* page background */
+        --card: #0f172a; /* card background */
+        --muted: #94a3b8; /* secondary text */
+        --text: #e2e8f0; /* primary text */
+        --brand: #c7ea2c; /* brand/accent (lime) */
+        --brand-2: #20c4d9; /* gradient secondary (teal) */ /* gradient secondary */
+        --ring: #38bdf8; /* focus ring */
+        --btn: #111827; /* button base */
+        --btn-hover: #0b1220; /* button hover */
+        --radius: 18px; /* global radius */
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #f3f4f6;
+          --card: #ffffff;
+          --muted: #64748b;
+          --text: #0f172a;
+          --btn: #0f172a;
+          --btn-hover: #111827;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        font-family: 'Cairo', system-ui, -apple-system, Segoe UI, Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji',
+          'Segoe UI Emoji';
+        /* Background inspired by the photo (lime → teal) */
+        background: linear-gradient(
+          180deg,
+          #c7ea2c 0%,
+          #20c4d9 60%,
+          #0ea5e9 100%
+        );
+        color: var(--text);
+        display: grid;
+        place-items: center;
+        padding: 32px 16px;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Cairo', system-ui, -apple-system, Segoe UI, Roboto,
+          'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji',
+          'Segoe UI Emoji';
+        background: radial-gradient(
+            1200px 800px at 50% -10%,
+            rgba(14, 165, 233, 0.12),
+            transparent 60%
+          ),
+          var(--bg);
+        color: var(--text);
+        display: grid;
+        place-items: center;
+        padding: 32px 16px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 560px;
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.04),
+            rgba(255, 255, 255, 0)
+          ),
+          var(--card);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius);
+        padding: 28px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Decorative glow */
+      .card::before {
+        content: '';
+        position: absolute;
+        inset: -40% -10% auto -10%;
+        height: 220px;
+        background: radial-gradient(
+          closest-side,
+          rgba(34, 211, 238, 0.22),
+          rgba(14, 165, 233, 0.08),
+          transparent 65%
+        );
+        transform: translateY(-55%);
+        pointer-events: none;
+        filter: blur(12px);
+      }
+
+      .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 14px;
+        margin-bottom: 18px;
+      }
+
+      .avatar {
+        width: 124px;
+        height: 124px;
+        border-radius: 50%;
+        border: 2px solid rgba(255, 255, 255, 0.25);
+        display: grid;
+        place-items: center;
+        background: radial-gradient(
+          circle at 30% 20%,
+          rgba(255, 255, 255, 0.12),
+          transparent 60%
+        );
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      }
+
+      .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .name {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin: 0;
+      }
+      .bio {
+        margin: 6px 0 0;
+        color: var(--muted);
+        font-weight: 400;
+      }
+
+      .links {
+        display: grid;
+        gap: 12px;
+        margin-top: 18px;
+      }
+
+      .link {
+        --_shadow: 0 6px 14px rgba(14, 165, 233, 0.18);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.04),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: calc(var(--radius) - 2px);
+        padding: 14px 16px;
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        transition: transform 0.12s ease, box-shadow 0.12s ease,
+          border-color 0.12s ease, background 0.12s ease;
+        box-shadow: var(--_shadow);
+      }
+
+      .link:hover {
+        transform: translateY(-2px);
+        border-color: rgba(56, 189, 248, 0.45);
+      }
+      .link:active {
+        transform: translateY(0);
+      }
+      .link:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 3px var(--ring);
+      }
+
+      .link .title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .icon {
+        width: 22px;
+        height: 22px;
+        flex: 0 0 22px;
+        display: inline-grid;
+        place-items: center;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        color: #001018;
+        padding: 6px;
+      }
+
+      .badge {
+        font-size: 12px;
+        color: #0b1220;
+        background: linear-gradient(135deg, #a7f3d0, #67e8f9);
+        padding: 6px 10px;
+        border-radius: 999px;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+        white-space: nowrap;
+      }
+
+      footer {
+        margin-top: 22px;
+        color: var(--muted);
+        font-size: 14px;
+        text-align: center;
+      }
+      footer a {
+        color: var(--text);
+        opacity: 0.9;
+      }
+
+      /* Small screens */
+      @media (max-width: 420px) {
+        .profile {
+          grid-template-columns: 88px 1fr;
+        }
+        .avatar {
+          width: 88px;
+          height: 88px;
+        }
+        .name {
+          font-size: 1.35rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main" aria-label="صفحة الروابط التعريفية">
+      <!-- Profile Header -->
+      <section class="profile">
+        <div class="avatar" aria-hidden="true" title="الشعار">
+          <!-- شعار حلزوني أبيض داخل الأفاتار ليشبه الصورة -->
+          <svg
+            viewBox="0 0 200 200"
+            width="124"
+            height="124"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#c7ea2c" />
+                <stop offset="100%" stop-color="#20c4d9" />
+              </linearGradient>
+            </defs>
+            <rect width="200" height="200" fill="url(#g)" />
+            <path
+              d="M100 60c25 0 45 20 45 45s-20 35-35 35-25-10-25-22 8-18 18-18 15 6 15 13"
+              fill="none"
+              stroke="#fff"
+              stroke-width="12"
+              stroke-linecap="round"
+            />
+            <path
+              d="M88 56c30-12 64 10 72 40 9 36-15 68-54 68-46 0-70-42-60-78 9-33 44-56 80-49"
+              fill="none"
+              stroke="#fff"
+              stroke-width="10"
+              opacity=".7"
+            />
+          </svg>
+        </div>
+        <div>
+          <h1 class="name">أحمد محمد</h1>
+          <p class="bio">
+            مطور واجهات أمامية — أشارك مقالات وتقنيات حول الويب الحديث.
+          </p>
+        </div>
+      </section>
+
+      <!-- Links (4 only) -->
+      <nav class="links" aria-label="الروابط المهمة">
+        <a
+          class="link"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          aria-label="الموقع الشخصي"
+        >
+          <span class="title">
+            <span class="icon" aria-hidden="true">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12 3l8 6v12H4V9l8-6z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span>موقعي الشخصي</span>
+          </span>
+          <span class="badge">جديد</span>
+        </a>
+
+        <a
+          class="link"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          aria-label="قناة يوتيوب"
+        >
+          <span class="title">
+            <span class="icon" aria-hidden="true">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29.94 29.94 0 001 12a29.94 29.94 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29.94 29.94 0 0023 12a29.94 29.94 0 00-.46-5.58z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path d="M10 15l5-3-5-3v6z" fill="currentColor" />
+              </svg>
+            </span>
+            <span>قناتي على يوتيوب</span>
+          </span>
+          <span class="badge">فيديوهات</span>
+        </a>
+
+        <a
+          class="link"
+          href="#"
+          target="_blank"
+          rel="noopener me"
+          aria-label="حساب تويتر X"
+        >
+          <span class="title">
+            <span class="icon" aria-hidden="true">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 4l8 9-7 7h3l5-5 5 5h3l-8-9 7-7h-3l-4 4-4-4H4z"
+                  fill="currentColor"
+                />
+              </svg>
+            </span>
+            <span>حسابي على X (تويتر)</span>
+          </span>
+          <span class="badge">تحديثات</span>
+        </a>
+
+        <a
+          class="link"
+          href="mailto:hello@example.com"
+          aria-label="اتصل بي عبر البريد"
+        >
+          <span class="title">
+            <span class="icon" aria-hidden="true">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 6h16v12H4z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path d="M4 7l8 6 8-6" stroke="currentColor" stroke-width="2" />
+              </svg>
+            </span>
+            <span>اتصل بي</span>
+          </span>
+          <span class="badge">بريد</span>
+        </a>
+      </nav>
+
+      <footer>© <span id="year"></span> — صُمِّمت بحُب.</footer>
+    </main>
+
+    <script>
+      // سنة ديناميكية
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // دعم تبديل السمة (اختياري: اضبط السمة عبر query param ?theme=light|dark)
+      const qp = new URLSearchParams(location.search);
+      const theme = qp.get('theme');
+      if (theme === 'light')
+        document.documentElement.style.colorScheme = 'light';
+      if (theme === 'dark') document.documentElement.style.colorScheme = 'dark';
+    </script>
+  </body>
+</html>
